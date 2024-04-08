@@ -22,7 +22,7 @@
 3. 🔋 [Features](#features)
 4. 🤸 [Quick Start](#quick-start)
 <!-- 5. 🕸️ [Assets & Code](#snippets)
-6. 🚀 [More](#more) -->
+5. 🚀 [More](#more) -->
 
 ## <a name="introduction">🤖 Introduction</a>
 
@@ -79,7 +79,7 @@ Make sure you have the following installed on your machine:
 
 ```bash
 git clone https://github.com/MohamedBrzan/video_chat_app.git
-cd zoom-clone
+cd video_chat_app
 ```
 
 **Installation**
