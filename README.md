@@ -1,6 +1,6 @@
 <div align="center">
   <br />
-    <a href="https://youtu.be/R8CIO1DZ2b8" target="_blank">
+    <a href="#" target="_blank">
       <img src="https://github.com/adrianhajdin/zoom-clone/assets/67959015/f09a8421-67d3-45ce-b9bc-a791cdc2774b" alt="Project Banner">
     </a>
   
@@ -13,10 +13,6 @@
   </div>
 
   <h3 align="center">A Zoom Clone</h3>
-
-   <div align="center">
-     Build this project step by step with our detailed tutorial on <a href="https://www.youtube.com/@javascriptmastery/videos" target="_blank"><b>JavaScript Mastery</b></a> YouTube. Join the JSM family!
-    </div>
 </div>
 
 ## 📋 <a name="table">Table of Contents</a>
@@ -30,7 +26,7 @@
 
 ## 🚨 Tutorial
 
-This repository contains the code corresponding to an in-depth tutorial available on our YouTube channel, <a href="https://www.youtube.com/@javascriptmastery/videos" target="_blank"><b>JavaScript Mastery</b></a>. 
+This repository contains the code corresponding to an in-depth tutorial available on our YouTube channel, <a href="https://www.youtube.com/@javascriptmastery/videos" target="_blank"><b>JavaScript Mastery</b></a>.
 
 If you prefer visual learning, this is the perfect resource for you. Follow our tutorial to learn how to build projects like these step-by-step in a beginner-friendly manner!
 
@@ -55,7 +51,6 @@ If you're getting started and need assistance or face any bugs, join our active 
 
 ## <a name="features">🔋 Features</a>
 
-
 👉 **Authentication**: Implements authentication and authorization features using Clerk, allowing users to securely log in via social sign-on or traditional email and password methods, while ensuring appropriate access levels and permissions within the platform.
 
 👉 **New Meeting**: Quickly start a new meeting, configuring camera and microphone settings before joining.
@@ -78,7 +73,7 @@ If you're getting started and need assistance or face any bugs, join our active 
 
 👉 **Responsive Design**: Follows responsive design principles to ensure optimal user experience across devices, adapting seamlessly to different screen sizes and resolutions.
 
-and many more, including code architecture and reusability. 
+and many more, including code architecture and reusability.
 
 ## <a name="quick-start">🤸 Quick Start</a>
 
@@ -334,14 +329,14 @@ export default config;
 <summary><code>components/MeetingCard.tsx</code></summary>
 
 ```typescript
-"use client";
+'use client';
 
-import Image from "next/image";
+import Image from 'next/image';
 
-import { cn } from "@/lib/utils";
-import { Button } from "./ui/button";
-import { avatarImages } from "@/constants";
-import { useToast } from "./ui/use-toast";
+import { cn } from '@/lib/utils';
+import { Button } from './ui/button';
+import { avatarImages } from '@/constants';
+import { useToast } from './ui/use-toast';
 
 interface MeetingCardProps {
   title: string;
@@ -367,38 +362,38 @@ const MeetingCard = ({
   const { toast } = useToast();
 
   return (
-    <section className="flex min-h-[258px] w-full flex-col justify-between rounded-[14px] bg-dark-1 px-5 py-8 xl:max-w-[568px]">
-      <article className="flex flex-col gap-5">
-        <Image src={icon} alt="upcoming" width={28} height={28} />
-        <div className="flex justify-between">
-          <div className="flex flex-col gap-2">
-            <h1 className="text-2xl font-bold">{title}</h1>
-            <p className="text-base font-normal">{date}</p>
+    <section className='flex min-h-[258px] w-full flex-col justify-between rounded-[14px] bg-dark-1 px-5 py-8 xl:max-w-[568px]'>
+      <article className='flex flex-col gap-5'>
+        <Image src={icon} alt='upcoming' width={28} height={28} />
+        <div className='flex justify-between'>
+          <div className='flex flex-col gap-2'>
+            <h1 className='text-2xl font-bold'>{title}</h1>
+            <p className='text-base font-normal'>{date}</p>
           </div>
         </div>
       </article>
-      <article className={cn("flex justify-center relative", {})}>
-        <div className="relative flex w-full max-sm:hidden">
+      <article className={cn('flex justify-center relative', {})}>
+        <div className='relative flex w-full max-sm:hidden'>
           {avatarImages.map((img, index) => (
             <Image
               key={index}
               src={img}
-              alt="attendees"
+              alt='attendees'
               width={40}
               height={40}
-              className={cn("rounded-full", { absolute: index > 0 })}
+              className={cn('rounded-full', { absolute: index > 0 })}
               style={{ top: 0, left: index * 28 }}
             />
           ))}
-          <div className="flex-center absolute left-[136px] size-10 rounded-full border-[5px] border-dark-3 bg-dark-4">
+          <div className='flex-center absolute left-[136px] size-10 rounded-full border-[5px] border-dark-3 bg-dark-4'>
             +5
           </div>
         </div>
         {!isPreviousMeeting && (
-          <div className="flex gap-2">
-            <Button onClick={handleClick} className="rounded bg-blue-1 px-6">
+          <div className='flex gap-2'>
+            <Button onClick={handleClick} className='rounded bg-blue-1 px-6'>
               {buttonIcon1 && (
-                <Image src={buttonIcon1} alt="feature" width={20} height={20} />
+                <Image src={buttonIcon1} alt='feature' width={20} height={20} />
               )}
               &nbsp; {buttonText}
             </Button>
@@ -406,14 +401,14 @@ const MeetingCard = ({
               onClick={() => {
                 navigator.clipboard.writeText(link);
                 toast({
-                  title: "Link Copied",
+                  title: 'Link Copied',
                 });
               }}
-              className="bg-dark-4 px-6"
+              className='bg-dark-4 px-6'
             >
               <Image
-                src="/icons/copy.svg"
-                alt="feature"
+                src='/icons/copy.svg'
+                alt='feature'
                 width={20}
                 height={20}
               />
