@@ -55,15 +55,6 @@
 
 /* ==== clerk class override ===== */
 
-.cl-providerIcon__apple,
-.cl-providerIcon__github {
-  filter: invert(1);
-}
-
-.cl-socialButtons > button {
-  border: none;
-}
-
 .cl-userButtonPopoverActionButtonIcon {
   color: white;
 }

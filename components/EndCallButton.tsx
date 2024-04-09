@@ -5,13 +5,13 @@ import { useCall, useCallStateHooks } from '@stream-io/video-react-sdk';
 import { Button } from './ui/button';
 import { useRouter } from 'next/navigation';
 
-export default function EndCallButton() {
+const EndCallButton = () => {
   const call = useCall();
   const router = useRouter();
 
   if (!call)
     throw new Error(
-      'useStreamCall must be used within a StreamCall component.'
+      'useStreamCall must be used within a StreamCall component.',
     );
 
   // https://getstream.io/video/docs/react/guides/call-and-participant-state/#participant-state-3
@@ -31,8 +31,10 @@ export default function EndCallButton() {
   };
 
   return (
-    <Button onClick={endCall} className='bg-red-500'>
+    <Button onClick={endCall} className="bg-red-500">
       End call for everyone
     </Button>
   );
-}
+};
+
+export default EndCallButton;

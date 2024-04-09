@@ -2,7 +2,7 @@ import { SignUp } from '@clerk/nextjs';
 
 export default function SignUpPage() {
   return (
-    <main className='flex-center h-screen w-full'>
+    <main className="flex h-screen w-full items-center justify-center">
       <SignUp />
     </main>
   );
