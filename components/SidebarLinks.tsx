@@ -30,7 +30,7 @@ export default function SidebarLinks({
             })}
           >
             <Image
-              src={link.imgUrl}
+              src={link.imgURL}
               alt={link.label}
               width={condition ? 24 : 20}
               height={condition ? 24 : 20}
@@ -64,7 +64,7 @@ export default function SidebarLinks({
               })}
             >
               <Image
-                src={link.imgUrl}
+                src={link.imgURL}
                 alt={link.label}
                 width={condition ? 24 : 20}
                 height={condition ? 24 : 20}
